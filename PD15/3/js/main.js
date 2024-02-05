@@ -1,4 +1,13 @@
-let arr = ['turim', 'daug', 'nesamoniu'];
-let paskutinis = arr[arr.length -1];
+function isvestiPaskutiniElementa(masyvas) {
+    if (masyvas.length === 0) {
+      
+        console.log("Masyvas yra tuščias.");
+    } else {
+        
+        var paskutinisElementas = masyvas[masyvas.length - 1];
+        console.log("Paskutinis masyvo elementas: " + paskutinisElementas);
+    }
+}
 
-console.log(paskutinis);
+var manoMasyvas = [1, 2, 3, 4, 5];
+isvestiPaskutiniElementa(manoMasyvas);

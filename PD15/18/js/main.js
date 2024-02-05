@@ -1,7 +1,16 @@
-let arr = [1, 2, 2, 1, 3, 4, 4, 5 ,5];
-let unikalus = arr.filter(x => arr.indexOf(x) === arr.lastIndexOf(x));
+function rastiUnikaliusElementus(masyvas) {
+    
+    var unikalusSet = new Set(masyvas);
 
-console.log(unikalus);
+    
+    var unikalusMasyvas = Array.from(unikalusSet);
 
-// (x => ...) zodziu iksiukas eina pro kiekviena elementa per arr | 
-// jei tinka tai permeta 
+    return unikalusMasyvas;
+}
+
+
+var manoMasyvas = [1, 2, 3, 2, 4, 5, 1, 6];
+
+var unikalusMasyvas = rastiUnikaliusElementus(manoMasyvas);
+
+console.log("Unikalūs elementai: " + unikalusMasyvas);

@@ -1,6 +1,19 @@
-let arr = [1,1,1,1,2,3,4,5,6,7,7,8,9,9];
-let arr1 = [];
-    for(let i=0; i< arr.length; i++) {
-        if(!arr1.includes(arr[i])) arr1.push(arr[i]);
+
+
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+
+    while (currentIndex > 0) {
+
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
     }
-console.log(arr1);
+    return array;
+  }
+
+  let arr = [2, 4, 6, 7, 9, 1, 2, 3, 's', 't', 'i', 11, 37, 42];
+  shuffle(arr);
+  console.log(arr);

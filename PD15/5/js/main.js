@@ -1,6 +1,13 @@
-// let arr = ['cabantis', 'abcadas', 'acbabad'];
-// let arr = [1, 3, 5, 2, 9];
+function rikiuotiMasyva(masyvas) {
+    
+    masyvas.sort(function(a, b) {
+        
+        return a - b;
+    });
+}
 
-let sortedArr = arr.sort();
 
-console.log(sortedArr);
+var manoMasyvas = [5, 2, 8, 1, 3];
+rikiuotiMasyva(manoMasyvas);
+
+console.log(manoMasyvas); // Rezultatas: [1, 2, 3, 5, 8]

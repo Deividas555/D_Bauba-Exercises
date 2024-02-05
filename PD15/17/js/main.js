@@ -1,12 +1,19 @@
-//Parašykite JavaScript programą, kuri sukuria masyvą tarp dviejų sveikųjų skaičių su žingsniu +1.
-let pirmas = 1;
-let paskutinis = 4; 
 
+function generuotiMasyvaNuosekliai(pradzia, pabaiga) {
+    var masyvas = [];
+
+    for (var i = pradzia; i <= pabaiga; i++) {
+        masyvas.push(i);
+    }
+
+    return masyvas;
+}
 let arr = [];
 
-for (let i = pirmas; i <= paskutinis; i++){
-    arr.push(i);
-}
 
-console.log(arr);
+var pradzia = 1;
+var pabaiga = 5;
 
+var naujasMasyvas = generuotiMasyvaNuosekliai(pradzia, pabaiga);
+
+console.log("Sukurtas masyvas: " + naujasMasyvas);

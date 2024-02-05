@@ -1,14 +1,21 @@
-/* Parašykite JavaScript programą, kuri randa kiek kartu pasikartoja pasirinktas masyvo
+
 elementas */
 
-let arr = [1, 1, 1, 5, 6, 4];
-let norim = 1;
-let turim = 0;
+function skaiciuotiPasikartojimus(masyvas, elementas) {
+    var pasikartojimuSkaicius = 0;
 
-for (let i = 0; i < arr.length; i++){
-    if (arr[i] === norim){
-        turim++;
+    for (var i = 0; i < masyvas.length; i++) {
+        if (masyvas[i] === elementas) {
+            pasikartojimuSkaicius++;
+        }
     }
+
+    return pasikartojimuSkaicius;
 }
 
-console.log(turim);
+var manoMasyvas = [1, 2, 3, 4, 2, 5, 2];
+var ieskomasElementas = 2;
+
+var pasikartojimuSkaicius = skaiciuotiPasikartojimus(manoMasyvas, ieskomasElementas);
+
+console.log("Elementas " + ieskomasElementas + " pasikartojo " + pasikartojimuSkaicius + " kartus.");

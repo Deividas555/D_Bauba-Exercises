@@ -1,10 +1,21 @@
-// Parašykite JavaScript programą, kuri sumaišo masyvo elementus.
+function sumaisytiMasyvoElementus(masyvas) {
+    var indeksas, laikinas;
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    for (var i = masyvas.length - 1; i > 0; i--) {
+        
+        indeksas = Math.floor(Math.random() * (i + 1));
 
-for (let i = arr.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+        laikinas = masyvas[i];
+        masyvas[i] = masyvas[indeksas];
+        masyvas[indeksas] = laikinas;
+    }
+
+    return masyvas;
 }
 
-console.log(arr);
+
+var manoMasyvas = [1, 2, 3, 4, 5];
+
+var sumaisytiElementai = sumaisytiMasyvoElementus(manoMasyvas);
+
+console.log("Sumaišyti elementai: " + sumaisytiElementai);

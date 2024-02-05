@@ -1,4 +1,12 @@
-let arr = [1, 2, 3, NaN, 5].findIndex(Number.isNaN);
+function isvestiNaNIndeksus(masyvas) {
+    for (var i = 0; i < masyvas.length; i++) {
+        if (isNaN(masyvas[i])) {
+            console.log("Indeksas su NaN reikšme: " + i);
+        }
+    }
+}
 
 
-console.log(`${arr} + 1`);
+var masyvasSuNaN = [1, 2, NaN, 4, NaN, 6];
+
+ivestiNaNIndeksus(masyvasSuNaN);

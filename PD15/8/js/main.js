@@ -1,7 +1,12 @@
-/* Parašykite JavaScript programą, kuri atspausdina pateikto masyvo elementus */
 
-let arr = ['arejus', 'robka'];
 
-for(let i = 0; i < arr.length; i++){
-    console.log(arr[i]);
+function atspausdintiMasyva(masyvas) {
+    for (var i = 0; i < masyvas.length; i++) {
+        console.log(masyvas[i]);
+    }
 }
+
+
+var manoMasyvas = [1, "du", true, { key: "value" }, [4, 5, 6]];
+
+atspausdintiMasyva(manoMasyvas);

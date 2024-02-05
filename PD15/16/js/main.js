@@ -1,4 +1,4 @@
-//Parašykite JavaScript programą, kuri gauna atsitiktinius elementus iš masyvo.
 
-let arr = [1, 2, 3, 4, 5];
+
+let arr = [7, 8, 9, 10, 11];
 console.log(arr[(Math.floor(Math.random() * arr.length))]);

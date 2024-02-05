@@ -1,15 +1,24 @@
-/* Parašykite JavaScript programą, kuri priima eilutę kaip įvestį ir keičia kiekvieno simbolio
-didžiąsias ir mažąsias raides į priešingas */
 
-let arr = 'NepaKEnktu'; 
-let nu = '';
 
-for(let i = 0; i < arr.length; i++) {
-    if(arr[i] === arr[i].toUpperCase()){
-        nu += arr[i].toLowerCase();
-    } else if (arr[i] === arr[i].toLowerCase()){
-        nu += arr[i].toUpperCase();
+function keistiRaides(ivykdyti) {
+    var naujaEilute = '';
+    
+    for (var i = 0; i < ivykdyti.length; i++) {
+        var simbolis = ivykdyti[i];
+        
+        if (simbolis === simbolis.toLowerCase()) {
+            naujaEilute += simbolis.toUpperCase();
+        } else {
+            naujaEilute += simbolis.toLowerCase();
+        }
     }
+
+    return naujaEilute;
 }
 
-console.log(nu);
+
+var pradinėEilutė = "Hello, world!";
+var pakeistaEilutė = keistiRaides(pradinėEilutė);
+
+console.log("Pradinė eilutė: " + pradinėEilutė);
+console.log("Pakeista eilutė: " + pakeistaEilutė);
