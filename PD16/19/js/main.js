@@ -12,6 +12,6 @@ function bubbleSort(arr) {
     return arr;
 }
 
-let arriukas = [12, 60, 80, 35, 21, 65, 37];
+let arriukas = [17, 50, 90, 40, 28, 62, 77];
 
-console.log(bubbleSort(arriukas))
+console.log(bubbleSort(wrx))

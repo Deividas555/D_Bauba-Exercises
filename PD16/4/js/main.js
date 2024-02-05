@@ -1,14 +1,5 @@
-
-function getNumberFactorial (a) {
-    
-    let result = a;
-
-    while(a > 1) {
-        a--;
-        result = result * a;
-    }
-
-    return result;
+function rombas (a){
+    return a * a;
 }
 
-console.log(getNumberFactorial(5));
+console.log(rombas(3));

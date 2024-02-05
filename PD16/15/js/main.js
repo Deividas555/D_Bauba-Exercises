@@ -1,12 +1,36 @@
-function getSecondFromBothEnds(a) {
-    a.sort((x, y) => x - y);
-    let s1 = a[1];
+function rastiAntrajiMinIrMax(masyvas) {
+    if (masyvas.length < 2) {
+        console.log("Masyve turi būti bent du skaičiai.");
+        return null;
+    }
 
-    a.sort((x, y) => y - x);
-    let s2 = a[1];
+    
+    var surikiuotasMasyvas = masyvas.sort(function(a, b) {
+        return a - b;
+    });
 
-    return { s1, s2 };
+
+    var unikalusMasyvas = Array.from(new Set(surikiuotasMasyvas));
+
+   
+    if (unikalusMasyvas.length < 2) {
+        console.log("Masyve turi būti bent du skaičiai.");
+        return null;
+    }
+
+
+    return {
+        antrasisMin: unikalusMasyvas[1],
+        antrasisMax: unikalusMasyvas[unikalusMasyvas.length - 2]
+    };
 }
-let arr = [1, 2, 3, 5, 88, 99, 0.5, 1.5, 225];
 
-console.log(getSecondFromBothEnds(arr));
+
+var skaiciuMasyvas = [3, 8, 1, 5, 2, 7];
+
+var rezultatai = rastiAntrajiMinIrMax(skaiciuMasyvas);
+
+if (rezultatai !== null) {
+    console.log("Antrasis mažiausias skaičius: " + rezultatai.antrasisMin);
+    console.log("Antrasis didžiausias skaičius: " + rezultatai.antrasisMax);
+}

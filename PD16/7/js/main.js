@@ -1,15 +1,6 @@
-function getPalindrome(word) {
-    let tempWord = word.split(""); 
-    let temp = tempWord.reverse();
-    let result = temp.join("");
-
-    if(word === result){
-        return true;
-    } else {
-        return false;
-    }
-    
-};
-
-
-console.log(getPalindrome('madam'));
+function reverse_a_number(n)
+{
+	n = n + "";
+	return n.split("").reverse().join("");
+}
+console.log(Number(reverse_a_number(7,8,9,10,11)));

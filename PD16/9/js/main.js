@@ -1,8 +1,11 @@
-function rearrangeIntoABC(word){
-    
-    return word.split('').sort().join('');
-};
+function isdestytiPagalAbeciu(eilute) {
+    return eilute.split('').sort().join('');
+}
 
 
+var pradineEilute = "sw";
 
-console.log(rearrangeIntoABC('begciau'));
+var isdestytaEilute = isdestytiPagalAbeciu(pradineEilute);
+
+console.log("Isdėstyta eilutė: " + isdestytaEilute);
+

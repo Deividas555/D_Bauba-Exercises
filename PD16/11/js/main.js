@@ -1,10 +1,22 @@
-let arr = ['ilgas', 'bet', 'ilgesnis'];
+function rastiIlgiausiaZodi(eilute) {
+    var zodziuMasyvas = eilute.split(' ');
 
+    var ilgiausiasZodis = '';
 
-function getIlgiausias() {
-    return arr.sort(function (a, b) {
-        return b.length - a.length;
-    })[0];
+    for (var i = 0; i < zodziuMasyvas.length; i++) {
+        var zodis = zodziuMasyvas[i];
+
+        if (zodis.length > ilgiausiasZodis.length) {
+            ilgiausiasZodis = zodis;
+        }
+    }
+
+    return ilgiausiasZodis;
 }
- 
-console.log(getIlgiausias());
+
+
+var pradineEilute = "Hello world!";
+
+var ilgiausiasZodis = rastiIlgiausiaZodi(pradineEilute);
+
+console.log("Ilgiausias žodis: " + ilgiausiasZodis);

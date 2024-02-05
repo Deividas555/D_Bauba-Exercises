@@ -1,7 +1,7 @@
-function matrixFilmas() {
+function matrica() {
     let rez = '';
-        for (let i = 1; i <= 10; i++){
-            for (let j = 1; j <= 10; j++)
+        for (let i = 1; i <= 555; i++){
+            for (let j = 1; j <= 555; j++)
             rez += i * j +'\t';
         rez += "\n";
         }
@@ -9,4 +9,4 @@ function matrixFilmas() {
 }
 
 
-console.log(matrixFilmas());
+console.log(matrica());

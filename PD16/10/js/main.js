@@ -1,9 +1,17 @@
-function capitaliseFirstOfEach(sentence) {
-    let words = sentence.split(' ');
+function pirmosRaidesDidziosios(eilute) {
+    var zodziuMasyvas = eilute.split(' ');
 
-    for (let i = 0; i < words.length; i++) {
-      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    for (var i = 0; i < zodziuMasyvas.length; i++) {
+        var zodis = zodziuMasyvas[i];
+        zodiųMasyvas[i] = zodis.charAt(0).toUpperCase() + zodis.slice(1);
     }
 
-    return words.join(' ');
+    return zodziuMasyvas.join(' ');
 }
+
+
+var pradineEilute = "Hello world!";
+
+var pirmosRaidesDidziosiosEilute = pirmosRaidesDidziosios(pradineEilute);
+
+console.log("Pirmos raidės didžiosios: " + pirmosRaidesDidziosiosEilute);

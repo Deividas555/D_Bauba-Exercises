@@ -1,10 +1,18 @@
-function getPalindrome(numbers) {
-    let tempWord = numbers.split(""); 
-    let temp = tempWord.reverse();
-    let result = temp.join("");
+function apverstiSkaiciu(skaicius) {
+    
+    var skaiciausTekstas = skaicius.toString();
 
-    return result;
-};
+    
+    var apverstasTekstas = skaiciausTekstas.split('').reverse().join('');
+
+    
+    return parseInt(apverstasTekstas, 10);
+}
 
 
-console.log(getPalindrome('12345'));
+var pradinisSkaicius = 12345;
+
+var apverstasSkaicius = apverstiSkaiciu(pradinisSkaicius);
+
+console.log("Pradinis skaičius: " + pradinisSkaicius);
+console.log("Apverstas skaičius: " + apverstasSkaicius);

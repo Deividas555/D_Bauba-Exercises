@@ -1,6 +1,9 @@
-function gautSkaiciausKvadrata (a) {
-    console.log(a ** 2);
-    console.log(Math.pow(a, 2));
-};
+function skaiciausKvadratas(skaicius) {
+    return skaicius * skaicius;
+}
 
-gautSkaiciausKvadrata(3);
+
+var pradinisSkaicius = 5;
+var kvadratas = skaiciausKvadratas(pradinisSkaicius);
+
+console.log("Skaičiaus kvadratas: " + kvadratas);

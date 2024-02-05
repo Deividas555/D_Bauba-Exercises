@@ -1,20 +1,49 @@
-function guessTheNumber (x) {
-    let random = 20; 
+
+var slaptasSkaicius = Math.floor(Math.random() * 100) + 1;
 
 
-    if (x < random){
-        console.log('nereikia');
-    } else if ( x > random) {
-        console.log('reikia');
-    } else if (x === random) {
-        console.log('gerai');
+function tikrintiAtsakyma(atsakymas) {
+    if (atsakymas > slaptasSkaicius) {
+        return "Per didelis! Bandykite mažesnį skaičių.";
+    } else if (atsakymas < slaptasSkaicius) {
+        return "Per mažas! Bandykite didesnį skaičių.";
     } else {
-        console.log('gadini viska');
+        return "Atspėjote! Slaptas skaičius yra " + slaptasSkaicius + ".";
     }
-};
+}
 
 
-guessTheNumber(19);
-guessTheNumber(21);
-guessTheNumber(20);
-guessTheNumber('nezinau');
+function atspekSkaiciu() {
+    var zaidimoPabaiga = false;
+
+    while (!zaidimoPabaiga) {
+        
+        var zaidetojoAtsakymas = prompt("Atspėkite skaičių nuo 1 iki 100:");
+
+        
+        if (zaidetojoAtsakymas === null) {
+            alert("Žaidimas nutrauktas.");
+            zaidimoPabaiga = true;
+        } else {
+            
+            var spejimas = parseInt(zaidetojoAtsakymas);
+
+            
+            if (!isNaN(spejimas)) {
+              
+                var rezultatas = tikrintiAtsakyma(spejimas);
+                alert(rezultatas);
+
+        
+                if (rezultatas.includes("Atspėjote") || rezultatas.includes("nutrauktas")) {
+                    zaidimoPabaiga = true;
+                }
+            } else {
+                alert("Neteisingas įvestas skaičius. Bandykite dar kartą.");
+            }
+        }
+    }
+}
+
+
+atspekSkaiciu();

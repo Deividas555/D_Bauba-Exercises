@@ -1,15 +1,28 @@
-function getEveryCombo(word, pref = '', rez = []) {
-    word.split('').forEach((_, i) => {
-        let newCombo = pref + word[i];
+function generuotiRaidiniusDerinius(zodis) {
+    var rezultatai = [];
 
-        rez.push(newCombo);
+    function derinti(likusiosRaides, derinys) {
+        if (likusiosRaides.length === 0) {
+            rezultatai.push(derinys);
+            return;
+        }
 
-        getEveryCombo(word.slice(0, i) + word.slice(i + 1), newCombo, rez);
+        for (var i = 0; i < likusiosRaides.length; i++) {
+            derinti(
+                likusiosRaides.slice(0, i) + likusiosRaides.slice(i + 1),
+                derinys + likusiosRaides[i]
+            );
+        }
+    }
 
-    });
+    derinti(zodis, '');
 
-  return rez;
-  }
+    return rezultatai;
+}
 
-let wordas = '123';
-console.log(getEveryCombo(wordas));
+
+var pradinisZodis = "cat";
+
+var deriniai = generuotiRaidiniusDerinius(pradinisZodis);
+
+console.log("Raidiniai deriniai:", deriniai);

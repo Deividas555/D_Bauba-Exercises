@@ -1,15 +1,19 @@
-// Parašykite JavaScript funkciją, kuri grąžina pateikto masyvo elementus, didesnius už nuro-
-// dytą skaičių.
+function didesniUzNurodyta(skaicius, masyvas) {
+    var rezultatai = [];
 
-let words = ['cia', 'galimai', 'ilgesnes', 'linijos', 'vienas']
+    for (var i = 0; i < masyvas.length; i++) {
+        if (masyvas[i] > skaicius) {
+            rezultatai.push(masyvas[i]);
+        }
+    }
 
-function getFromMinimumNumber(sentence){
-    return result = words.filter((word) => word.length > 5);
-
-};
+    return rezultatai;
+}
 
 
+var nurodytasSkaicius = 5;
+var skaiciuMasyvas = [3, 8, 1, 5, 2, 7];
 
+var didesniUzNurodytaMasyvas = didesniUzNurodyta(nurodytasSkaicius, skaiciuMasyvas);
 
-console.log(getFromMinimumNumber(words));
-
+console.log("Elementai didesni už " + nurodytasSkaicius + ": " + didesniUzNurodytaMasyvas);

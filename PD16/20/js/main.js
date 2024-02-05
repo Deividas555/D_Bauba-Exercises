@@ -1,17 +1,27 @@
-function findLongestCountryName(arr){
-    return arr.sort(function (a, b){
-        return b.length - a.length;
-    })[0]
-};
+function rastiIlgiausiaSaliesPavadinima(salys) {
+    if (salys.length === 0) {
+        console.log("Sąrašas yra tuščias.");
+        return null;
+    }
 
-let arrejus = ['Prancuzija', 'Brazilija', 'Estija', 'Liuksemburgas']
+    var ilgiausiasPavadinimas = salys[0];
 
-console.log(findLongestCountryName(arrejus));
+    for (var i = 1; i < salys.length; i++) {
+        var pavadinimas = salys[i];
 
-// function getIlgiausias() {
-//     return arr.sort(function (a, b) {
-//         return b.length - a.length;
-//     })[0];
-// }
- 
-// console.log(getIlgiausias());
+        if (pavadinimas.length > ilgiausiasPavadinimas.length) {
+            ilgiausiasPavadinimas = pavadinimas;
+        }
+    }
+
+    return ilgiausiasPavadinimas;
+}
+
+
+var saliuPavadinimai = ["Lietuva", "Latvija", "Estija", "Jungtinė Karalystė", "Vokietija"];
+
+var ilgiausiasPavadinimas = rastiIlgiausiaSaliesPavadinima(saliuPavadinimai);
+
+if (ilgiausiasPavadinimas !== null) {
+    console.log("Ilgiausias šalies pavadinimas: " + ilgiausiasPavadinimas);
+}

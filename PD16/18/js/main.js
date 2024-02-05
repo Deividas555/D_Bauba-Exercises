@@ -1,16 +1,22 @@
-// Parašykite JavaScript funkciją, kuri suranda eilutėje pirmąjį nepasikartojantį simbolį.
-
-function firstNonRepeatingCharacter(str) {
-    for (let i = 0; i < str.length; i++) {
-      let char = str[i];
-      if (str.indexOf(char) == i && str.indexOf(char, i + 1) == -1) {
-        return char;
-      }
+function pirmasNepasikartojantisSimbolis(eilute) {
+    for (var i = 0; i < eilute.length; i++) {
+        var simbolis = eilute[i];
+        
+        if (eilute.indexOf(simbolis) == eilute.lastIndexOf(simbolis)) {
+            return simbolis;
+        }
     }
-    return "NERA TOKIO";
+
+    return null; 
 }
 
 
-console.log(firstNonRepeatingCharacter('kartak'));
+var pradineEilute = "abcdea";
 
-console.log(firstNonRepeatingCharacter('abaaba'));
+var nepasikartojantisSimbolis = pirmasNepasikartojantisSimbolis(pradineEilute);
+
+if (nepasikartojantisSimbolis !== null) {
+    console.log("Pirmas nepasikartojantis simbolis: " + nepasikartojantisSimbolis);
+} else {
+    console.log("Visi simboliai pasikartoja.");
+}

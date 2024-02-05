@@ -1,11 +1,18 @@
-// A = 1/2 bh
-// b base       h height
+function skaiciuotiTrikampioPlota(a, b, c) {
 
-function getAreaFromTriangle(b, h) {
-    let A = 0.5 * b * h;
-    return A;
+    var p = (a + b + c) / 2;
+
+
+    var plotas = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+
+    return plotas;
 }
 
 
+var krastineA = 5;
+var krastineB = 6;
+var krastineC = 7;
 
-console.log(getAreaFromTriangle(7, 6));
+var trikampioPlotas = skaiciuotiTrikampioPlota(krastineA, krastineB, krastineC);
+
+console.log("Trikampio plotas: " + trikampioPlotas);

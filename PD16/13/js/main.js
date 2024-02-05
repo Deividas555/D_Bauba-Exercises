@@ -3,4 +3,4 @@ function checkArgumentType (a) {
 };
 
 
-console.log(checkArgumentType("12"));
+console.log(checkArgumentType("17"));

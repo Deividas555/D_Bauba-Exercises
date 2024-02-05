@@ -1,12 +1,20 @@
-/**
- * @param {*} nera pakeistas sakinys be tarpu kurio ilgis bus grazintas
- * @param {*} sentence irasomas stringas kuris bus skaiciuojamas be tarpu
- * @returns 
- */
+function skaiciuotiRaides(eilute) {
 
-function countWithoutSpaces(sentence){
-    nera = sentence.split(' ').join('');
-    return nera.length;
-};
+    var raidziuMasyvas = eilute.match(/[a-zA-Z]/g);
 
-console.log(countWithoutSpaces('cia tarpas'))
+  
+    if (raidziuMasyvas) {
+        
+        return raidziuMasyvas.length;
+    } else {
+        
+        return 0;
+    }
+}
+
+
+var pradinisTekstas = "Hello,World!";
+
+var raidziuSkaicius = skaiciuotiRaides(pradinisTekstas);
+
+console.log("Raidžių skaičius: " + raidziuSkaicius);

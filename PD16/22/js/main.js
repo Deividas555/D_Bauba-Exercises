@@ -6,8 +6,8 @@ function getFunctionName(callback) {
     }
 }
 
-function functionPVZ() {
+function functionwrx() {
     
 }
 
-console.log(getFunctionName(functionPVZ));
+console.log(getFunctionName(functionwrx));
