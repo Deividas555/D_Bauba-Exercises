@@ -1,0 +1,18 @@
+.Card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .Card.available {
+    background-color: #f0fff0;
+  }
+  
+  .Card.unavailable {
+    background-color: #f0f0f0;
+    filter: grayscale(100%);
+  }
+  

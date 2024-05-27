@@ -1,0 +1,50 @@
+
+
+.yra h1, p{
+    padding: 0.1rem 1rem 0.1rem 1rem;
+}
+
+.yra h2 {
+    background-color: blueviolet;
+    color: white;
+    display: inline-block;
+    border-radius: 5%;
+    margin: 0.5rem;
+}
+
+.yra .CardContainer{
+    border: 3px solid black;
+    width: 17rem;
+    position: relative;
+}
+
+.yra img {
+    width: 17rem;
+}
+
+
+
+.regular h1, p{
+    padding: 0.1rem 1rem 0.1rem 1rem;
+}
+
+.regular h2 {
+    background-color: gray;
+    color: white;
+    display: inline-block;
+    border-radius: 5%;
+    margin: 0.5rem;
+    filter: grayscale(100%);
+}
+
+.regular .CardContainer{
+    border: 3px solid black;
+    width: 17rem;
+    position: relative;
+    filter: grayscale(100%);
+}
+
+.regular img {
+    width: 17rem;
+    filter: grayscale(100%);
+}
